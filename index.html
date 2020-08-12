@@ -133,7 +133,7 @@
                 <span>航空</span>
               </div>
             </div>
-            <div class="tab-content" style="display: none;">
+            <div class="tab-content" style="display: non;">
               <div class="chart-wrap dizuo" style="margin-top: 60px;">
                 <div class="chart">
                   <img width="100%" src="./images/charts2.png" alt="" />
@@ -185,7 +185,7 @@
                 </ul>
               </div>
             </div>
-            <div class="tab-content" style="display: non;">
+            <div class="tab-content" style="display: none;">
               <div
                 class="chart-wrap dizuo flex-aic"
                 style="padding-bottom: 80px;"
@@ -330,8 +330,13 @@
           </div>
         </div>
       </div>
-      <div class="pop flex-center" id="video" style="display: non;">
+      <div class="pop flex-center" id="video" style="display: none;">
         <div class="video-pop">
+          <div class="actions">
+            <span class="full1"></span>
+            <span class="full2"></span>
+            <span class="close"></span>
+          </div>
           <div class="video-wrap"><img src="./images/timg.jpeg" alt="" /></div>
           <div class="video-info">
             <div class="flex-aic">
@@ -344,16 +349,36 @@
                 <strong>四川达州应...</strong>
               </div>
               <div class="item">
-                <p></p>
-                <strong></strong>
+                <p>飞行器</p>
+                <strong>MATRICE 210</strong>
               </div>
               <div class="item">
-                <p></p>
-                <strong></strong>
+                <p>电池电量</p>
+                <strong>70%</strong>
               </div>
             </div>
-            <div class="open-handle"></div>
+            <div class="flex-aic">
+              <div class="item">
+                <p>高度</p>
+                <strong>0m</strong>
+              </div>
+              <div class="item">
+                <p>速度</p>
+                <strong>0m/s</strong>
+              </div>
+              <div class="item">
+                <p>状态</p>
+                <strong>未起飞</strong>
+              </div>
+            </div>
+            <div class="flex-aic">
+              <div class="item">
+                <p>GPS</p>
+                <strong>无法获取GPS</strong>
+              </div>
+            </div>
           </div>
+          <div class="open-handle"></div>
         </div>
       </div>
     </main>
@@ -392,11 +417,24 @@
         });
 
         $('.close').click(function () {
-          $(this).parent().parent().hide();
+          $(this).parent().parent('.pop').hide();
+        });
+
+        $('.video-pop .close').click(function () {
+          $(this).parent().parent().parent('.pop').hide();
         });
 
         $('#live').click(function () {
           $(this).toggleClass('open').siblings('.live-list').toggle();
+        });
+
+        $('.open-handle').click(function () {
+          $(this).toggleClass('open');
+          $('.video-info').toggleClass('open');
+        });
+
+        $('.live-list').on('click', 'li', function () {
+          $('#video').show();
         });
       });
     </script>

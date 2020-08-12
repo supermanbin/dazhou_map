@@ -57,9 +57,8 @@ button,
 input,
 select,
 textarea {
-  font: 300 1rem/1.2 PingHei, 'PingFang SC', 'Helvetica Neue', Helvetica,
-    STHeitiSC-Light, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif,
-    WenQuanYi Micro Hei, sans;
+  font: 300 1rem/1.2 STHeitiSC-Light, Microsoft Yahei, Hiragino Sans GB,
+    Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 }
 table {
   border-collapse: collapse;
