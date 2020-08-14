@@ -279,6 +279,7 @@ $flex: flex;
   overflow: hidden;
   border-bottom: 10px solid transparent;
   background: url(../images/map-bg.png) no-repeat;
+  position: relative;
 }
 
 .footer {
@@ -292,74 +293,72 @@ $flex: flex;
 
 .footer__content {
   position: relative;
-  .live {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #fff;
-    background: #081b3f;
-    transform: translate(-142%, 88px);
+}
+.live {
+  position: absolute;
+  left: 50px;
+  top: 60px;
+  color: #fff;
+  background: #081b3f;
 
-    .text {
-      width: 350px;
-      height: 80px;
-      padding: 20px;
-      border: 1px solid #2d6584;
-      cursor: pointer;
-      font-size: 32px;
+  .text {
+    width: 350px;
+    height: 80px;
+    padding: 20px;
+    border: 1px solid #2d6584;
+    cursor: pointer;
+    font-size: 32px;
 
-      strong {
-        color: $primary;
-        margin-left: 20px;
-      }
-
-      &::after {
-        display: inline-block;
-        width: 33px;
-        height: 33px;
-        background: url(../images/向上展开.png) no-repeat;
-        content: '';
-      }
-
-      &.open {
-        &::after {
-          background: url(../images/向下收起.png) no-repeat;
-        }
-      }
+    strong {
+      color: $primary;
+      margin-left: 20px;
     }
 
-    .live-list {
-      position: absolute;
-      padding: 20px;
-      width: 100%;
-      background: #081b3f;
-      border: 1px solid #2d6584;
-      bottom: 79px;
-      font-size: 24px;
-      display: none;
+    &::after {
+      display: inline-block;
+      width: 33px;
+      height: 33px;
+      background: url(../images/向下收起.png) no-repeat;
+      content: '';
+    }
 
-      h3 {
-        color: $primary;
-        font-size: 24px;
+    &.open {
+      &::after {
+        background: url(../images/向上展开.png) no-repeat;
       }
+    }
+  }
 
-      li {
-        margin-top: 15px;
-        padding: 10px 15px;
-        background: #02101e;
-        @extend .#{$flex}-jcb;
-        cursor: pointer;
-        i {
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          background: url(../images/弹出视频.png) no-repeat;
-        }
+  .live-list {
+    position: absolute;
+    top: 79px;
+    padding: 20px;
+    width: 100%;
+    background: #081b3f;
+    border: 1px solid #2d6584;
+    font-size: 24px;
+    display: none;
+
+    h3 {
+      color: $primary;
+      font-size: 24px;
+    }
+
+    li {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #02101e;
+      @extend .#{$flex}-jcb;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(../images/弹出视频.png) no-repeat;
       }
     }
   }
 }
-
 .menu {
   width: 2969px;
   height: 194px;

@@ -27,7 +27,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .footer__content .live .live-list li, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .drone-infos li i {
+.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .live .live-list li, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .drone-infos li i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,7 +81,7 @@
       justify-content: center;
 }
 
-.jcb, .flex-jcb, .footer__content .live .live-list li {
+.jcb, .flex-jcb, .live .live-list li {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
       justify-content: space-between;
@@ -241,6 +241,7 @@
   overflow: hidden;
   border-bottom: 10px solid transparent;
   background: url(../images/map-bg.png) no-repeat;
+  position: relative;
 }
 
 .footer {
@@ -256,17 +257,15 @@
   position: relative;
 }
 
-.footer__content .live {
+.live {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50px;
+  top: 60px;
   color: #fff;
   background: #081b3f;
-  -webkit-transform: translate(-142%, 88px);
-          transform: translate(-142%, 88px);
 }
 
-.footer__content .live .text {
+.live .text {
   width: 350px;
   height: 80px;
   padding: 20px;
@@ -275,47 +274,47 @@
   font-size: 32px;
 }
 
-.footer__content .live .text strong {
+.live .text strong {
   color: #21efff;
   margin-left: 20px;
 }
 
-.footer__content .live .text::after {
+.live .text::after {
   display: inline-block;
   width: 33px;
   height: 33px;
-  background: url(../images/向上展开.png) no-repeat;
+  background: url(../images/向下收起.png) no-repeat;
   content: '';
 }
 
-.footer__content .live .text.open::after {
-  background: url(../images/向下收起.png) no-repeat;
+.live .text.open::after {
+  background: url(../images/向上展开.png) no-repeat;
 }
 
-.footer__content .live .live-list {
+.live .live-list {
   position: absolute;
+  top: 79px;
   padding: 20px;
   width: 100%;
   background: #081b3f;
   border: 1px solid #2d6584;
-  bottom: 79px;
   font-size: 24px;
   display: none;
 }
 
-.footer__content .live .live-list h3 {
+.live .live-list h3 {
   color: #21efff;
   font-size: 24px;
 }
 
-.footer__content .live .live-list li {
+.live .live-list li {
   margin-top: 15px;
   padding: 10px 15px;
   background: #02101e;
   cursor: pointer;
 }
 
-.footer__content .live .live-list li i {
+.live .live-list li i {
   display: inline-block;
   width: 30px;
   height: 30px;
